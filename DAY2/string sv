@@ -1,0 +1,68 @@
+module string_example;
+  
+  string s1,s2,s3;
+  string s="ASIC";
+  int len;
+  
+  initial begin
+    s1="PRAV";
+    s2="EEN";
+    
+    
+    
+     //concatenation operators
+    s3={s1,"+",s2};
+    
+    
+   
+    //length
+    len=s3.len();
+    
+    //display
+    $display("s1=%s",s1);
+    $display("s2=%s",s2);
+    $display("s3=%s",s3);
+    
+    //character access
+    $display("%c",s[0]);
+    $display("%c",s[1]);
+    $display("%c",s[2]);
+    $display("%c",s[3]);
+    
+    
+  //forloop
+    for(int i=0; i<s.len();i++)begin
+      $display("s[%0d]=%c",i,s[i]);
+      
+      //string comparison
+      if(s1==s2)
+        $display("equal");
+      else
+        $display("not equal");
+    end 
+    
+  end
+    endmodule
+    
+    
+
+
+
+    output
+    s1=PRAV
+# s2=EEN
+# s3=PRAV+EEN
+# A
+# S
+# I
+# C
+# s[0]=A
+# not equal
+# s[1]=S
+# not equal
+# s[2]=I
+# not equal
+# s[3]=C
+# not equal
+
+  
