@@ -1,0 +1,23 @@
+// Code your design here
+module struct_packed;
+  
+  struct_packed{
+    bit[7:0] intr;
+    logic[32:0] addr;
+  }sur;
+  
+  initial begin
+    sur.intr=8'hff;
+    sur.addr=24'h1234567;
+    
+    $display("sur=%p",sur);
+    $display("intr=%p,sur.intr);
+             $display("addr=%p",sur.addr);
+             end
+             endmodule
+
+             output= run -all
+# sur=2190433320978
+# sur.intr=255
+# sur.addr=        18
+# exit
