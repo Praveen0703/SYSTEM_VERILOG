@@ -1,0 +1,37 @@
+module union_packed_typedef;
+  typedef union packed{
+ 
+    logic [31:0]b;
+    
+    struct packed{
+      bit[7:0] k1;
+      bit [7:0] k2;
+      bit [7:0] k3;
+      bit [7:0] k4;
+      
+    }sur;
+  }kit;
+  
+  kit kit1;
+  
+  initial begin
+  
+    kit1.b=32'hAABBCCDD;
+    
+   
+    $display("$time=%p",kit1.b);
+    
+    $display("k1=%b",kit1.sur.k1);
+    $display("k2=%b",kit1.sur.k2);
+    $display("k3=%b",kit1.sur.k3);
+    $display("k4=%b",kit1.sur.k4);
+  end
+endmodule
+
+output=
+    $time=2864434397
+# k1=10101010
+# k2=10111011
+# k3=11001100
+# k4=11011101
+      
