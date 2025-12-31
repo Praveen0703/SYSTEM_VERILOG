@@ -1,0 +1,26 @@
+module union_basics;
+  typedef union{
+    bit[7:0] word;
+    logic[31:0] letter;
+  }sur;
+  
+  sur vi;
+  initial begin
+   
+    
+    vi.word=8'h12;
+    $display("$time=%p",vi.word);
+    $display("$time=%p",vi.letter);
+    
+    vi.letter=32'hAAAB;
+    $display("$time=%p",vi.word);
+    $display("$time=%b",vi.letter);
+    
+  end 
+endmodule
+
+output=
+$time=18
+# $time=18
+# $time=171
+# $time=00000000000000001010101010101011
