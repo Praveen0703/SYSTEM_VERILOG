@@ -1,0 +1,82 @@
+// Code your design here
+module associative_array;
+  
+  longint data [int];
+  int emp;
+  
+  initial begin
+    data[10]=56;
+    data[55]=33;
+    data[33]=21;
+    data[44]=58;
+    data[21]=39;
+    data[2]=1;
+    
+ // print array elements
+    foreach (data[i])
+  $display("data[%0d]=%0d",i,data[i]);
+    
+    
+//print array size and entires
+    $display("size=%0d",data.size());
+    $display("num=%0d",data.num());
+    
+    //array exists
+    if(data.exists(2))
+      $display("element exists at index=%0d",(2));
+      else
+        $display("element does not exists at index=%0d",(2));
+    
+  //first
+    data.first(emp);
+    $display("data.first=%0d",emp);
+    
+    //last
+    data.last(emp);
+    $display("data.last=%0d",emp);
+    
+    //previous
+    emp=44;
+     data.prev(emp);
+    $display("data.prev=%0d",emp);
+    //previous
+  emp=33;
+    data.prev(emp);
+    $display("data.prev=%0d",emp);
+ 
+    //next
+    emp=33;
+    data.next(emp);
+    $display("data.next=%0d",emp);
+   
+    
+   //delete
+    data.delete(2);
+    $display("data.delete=%0d",2);
+  
+    
+  end 
+endmodule
+
+output=data[2]=1
+# data[10]=56
+# data[21]=39
+# data[33]=21
+# data[44]=58
+# data[55]=33
+# size=6
+# num=6
+# element exists at index=2
+# data.first=2
+# data.last=55
+# data.prev=33
+# data.prev=21
+# data.next=44
+# data.delete=2
+
+
+
+
+    
+    
+      
