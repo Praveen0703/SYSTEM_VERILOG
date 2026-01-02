@@ -1,0 +1,21 @@
+module associative_array;
+  bit[7:0] ss [int];
+  initial begin
+   ss [5]=11;
+    ss[7]=22;
+    ss[9]=24;
+    ss[11]=14;
+    
+    $display("ss[5]=%0d",ss[5]);
+    $display("ss[7]=%0d",ss[7]);
+    $display("ss[9]=%0d",ss[9]);
+    $display("ss[11]=%0d",ss[11]);
+  end
+endmodule     
+
+
+OUTPUT= run -all
+# ss[5]=11
+# ss[7]=22
+# ss[9]=24
+# ss[11]=14
