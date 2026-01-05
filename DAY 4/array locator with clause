@@ -1,0 +1,58 @@
+// Code your design here
+module array_locator;
+  //with local variable
+  
+  int q[$]='{10,20,30,35,45,55,65,75,85};
+  int result[$];
+  int index[$];
+  
+  initial begin
+    $display("q=%p",q);
+    
+    //elements greater than 55
+    result=q.find(x) with (x > 50);
+    $display("Elements > 50:%p",result);
+    
+    //elements less than 35
+    result=q.find(x)with(x < 35);
+    $display("Elements < 35:%p",result);
+    
+    //index 75
+    index=q.find_index(x)with(x == 75);
+    $display("Elements==75:%p",index);
+    
+    
+   //find even numbers
+    result=q.find(x)with((x %2)==0);
+    $display("Even Elements :%p",result);
+    
+   
+    //max value
+    $display("Maximum value:%p",q.max());
+    
+    //min value
+    $display("Minimum value:%p",q.min());
+    
+    //sum of all value
+    $display("sum of all value:%p",q.sum());
+    
+    //product of all value 
+    $display("product of all value:%p",q.product());
+    
+  end
+endmodule
+    
+
+
+
+
+output=
+# q='{10, 20, 30, 35, 45, 55, 65, 75, 85}
+# Elements > 50:'{55, 65, 75, 85}
+# Elements < 35:'{10, 20, 30}
+# Elements==75:'{7}
+# Even Elements :'{10, 20, 30}
+# Maximum value:'{85}
+# Minimum value:'{10}
+# sum of all value:420
+# product of all value:271192080
