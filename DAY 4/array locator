@@ -1,0 +1,35 @@
+// Code your design here
+module array_locator;
+  
+  int q[$]='{10,20,30,35,45,55,65,75,85};
+  int result[$];
+  int index[$];
+  
+  initial begin
+    $display("q=%p",q);
+    
+    //elements greater than 55
+    result=q.find() with (item > 50);
+    $display("Elements > 50:%p",result);
+    
+    //elements less than 35
+    result=q.find()with(item < 35);
+    $display("Elements < 35:%p",result);
+    
+    //index 75
+    index=q.find_index()with(item == 75);
+    $display("Elements==75:%p",index);
+    
+    
+   //find even numbers
+    result=q.find()with((item %2)==0);
+    $display("Even Elements :%p",result);
+    
+  end
+endmodule
+    
+       output=q='{10, 20, 30, 35, 45, 55, 65, 75, 85}
+# Elements > 50:'{55, 65, 75, 85}
+# Elements < 35:'{10, 20, 30}
+# Elements==75:'{7}
+# Even Elements :'{10, 20, 30}
