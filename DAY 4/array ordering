@@ -1,0 +1,36 @@
+module array_ordering;
+  int [7]arr ='{12,22,32,44,55,65,77};
+  int q[$];
+  
+  initial begin
+    q.push_pop={24};
+    q.push_front={55};
+    q.push_back={33};
+    
+    $display("q=%p",q);
+    
+   //shuffle
+    q.shuffle();
+    $display("After shuffle q=%p",q);
+    
+   //sort
+    q.sort();
+    $display("sort q=%p",q);
+    
+    q.rsort();
+    $display("rsort q=%p",q);
+    
+    q.reverse();
+    $display("reverse q=%p",q);
+    
+             end
+             endmodule
+
+
+output=run -all
+# q='{55, 24, 33}
+# After shuffle q='{55, 24, 33}
+# sort q='{24, 33, 55}
+# rsort q='{55, 33, 24}
+# reverse q='{24, 33, 55}
+  
