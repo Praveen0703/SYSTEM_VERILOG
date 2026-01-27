@@ -1,0 +1,51 @@
+module relational_operator;
+  logic [2:0]a,b;
+ 
+     logic c;
+    
+ 
+  initial begin
+    a=3'b101;
+    b=3'b111;
+    
+     
+    $display("a=%b",a);
+    $display("b=%b",b);
+    $display("c=%b",c);
+    
+   // a greater than b;
+    
+    c= (a > b);
+    $display("c=%b",c);
+    
+    //a less than b 
+    c=(a < b);
+    $display("c=%b",c);
+    
+    c=(a >= b);
+    $display("c=%b",c);
+    
+    c=(a <= b);
+    $display("c=%b",c);
+    
+    
+    
+  end
+endmodule
+
+
+
+ a=101
+# b=111
+# c=x
+# c=0
+# c=1
+# c=0
+# c=1
+
+
+
+
+
+
+output=
