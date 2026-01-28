@@ -1,0 +1,42 @@
+// Code your design here
+module logical_operator;
+  logic [3:0]a,b;
+  logic c;
+
+initial begin
+a=3'b101; 
+b=3'b111; 
+  
+$display("\n \t The value of a is %0d",a);
+$display("\n \t The value of b is %0b",b);
+$display("\n \t The value of c is %0b",c);
+
+  // Logical OR (||) operation
+  // Logical OR: If either 'a' or 'b' is nonzero, result is 1
+  c = a ||b ;
+  $display("\n \t The output of logic OR a||b is %0b",c);
+  
+  // Logical AND (&&) operation
+  // Logical AND: If both 'a' and 'b' are nonzero, result is 1
+  c = a && b;
+  $display("\n \t The output of logic AND a && b is %0b",c);
+  
+  // Logical NOT (!) operation
+  // Logical NOT: If 'a' is nonzero, result is 0; otherwise, result is 1
+  c =!a;
+  $display("\n \t The output of logic NOT !b is %0b",c);
+  end
+endmodule 
+
+output=The value of a is 5
+# 
+#  	 The value of b is 111
+# 
+#  	 The value of c is x
+# 
+#  	 The output of logic OR a||b is 1
+# 
+#  	 The output of logic AND a && b is 1
+# 
+#  	 The output of logic NOT !b is 0
+# exit
