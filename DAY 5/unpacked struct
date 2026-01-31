@@ -1,0 +1,26 @@
+module struct1;
+  
+struct{
+  string name;
+  bit [15:0] salary;
+  byte id;
+}employee;
+
+
+
+  initial begin
+    
+    employee='{"praveen",55000,0703};
+    
+    $display("unpacked struct example");
+             $display("employee=%p",employee);
+                          
+    
+    $display("size of employee:%0d",$bits(employee));
+             end 
+             endmodule
+
+
+output:unpacked struct example
+employee='{name:"praveen", salary:55000, id:-65}
+size of employee:80
