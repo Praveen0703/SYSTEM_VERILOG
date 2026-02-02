@@ -1,0 +1,42 @@
+// Code your design here
+module packed_structure;
+ 
+  typedef struct packed{
+    int a;
+    bit b;
+    byte c;
+    logic [32:0] d;
+    shortint e ;
+    longint  f;
+  } packed_alpha;
+     
+  packed_alpha p;
+  initial begin
+    p.a=32'hABCD;
+    p.b= 1;
+    p.c=8'd6;
+    p.d=32'hABCDEF;
+    p.e=16'd543;
+    p.f=64'd2345;
+    
+    $display("packed structure of all elements");
+    $display(" all the elements of p=%p",p);
+    $display("p.a=%0h",p.a);
+    $display("p.b=%0d",p.b);
+    $display("p.c=%0d",p.c);
+    $display("p.d=%0d",p.d);
+    $display("p.e=%0d",p.e);
+    $display("p.f=%0d",p.f);
+  end
+endmodule
+
+
+
+
+output:all the elements of p='{a:43981, b:1, c:6, d:11259375, e:543, f:2345}
+# p.a=abcd
+# p.b=1
+# p.c=6
+# p.d=11259375
+# p.e=543
+# p.f=2345
