@@ -1,0 +1,33 @@
+module union_unpacked;
+  
+  typedef union {
+    int c;
+    bit[15:0]a;
+    byte b;
+    logic [31:0]d;
+  }union_unpacked;
+  
+union_unpacked u;
+  initial begin
+    
+    u.a=16'd222;
+    u.b=16'd233;
+    u.c=32'd236;
+    u.d=32'd237;
+    
+    $display("print all union unpacked");
+    $display("all union unpacked=%p",u);
+    $display("a=%0d",u.a);
+    $display("b=%0d",u.b);
+    $display("c=%0d",u.c);
+    $display("d=%0d",u.d);
+  end 
+endmodule
+    
+
+output:print all union unpacked
+# all union unpacked='{c:237, a:237, b:-19, d:237}
+# a=237
+# b=-19
+# c=237
+# d=237
