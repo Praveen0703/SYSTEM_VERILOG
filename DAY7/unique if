@@ -1,0 +1,16 @@
+module if_assignment;
+  int a=10;
+       
+    initial begin
+  
+      unique if(a>15)
+        $display ("a is greater than 15");
+      else if (a<15)
+        $display("a is less than 15");
+      else if( a==15)
+        $display("a is equal to 15");
+     end  
+      endmodule         
+               
+             
+a is less than 15
