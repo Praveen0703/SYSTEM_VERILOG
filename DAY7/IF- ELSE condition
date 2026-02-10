@@ -1,0 +1,19 @@
+module if_assignment;
+  int a=10;
+  int b=20;
+  int c=30;
+  
+  initial begin
+    if(a>b)
+      $display("a is greater than b");
+    else if(a<b)
+    $display("a is less than b");
+    else if(a<c)
+  $display("a is  less than c");  
+end
+
+
+endmodule
+
+
+output=a is less than b
