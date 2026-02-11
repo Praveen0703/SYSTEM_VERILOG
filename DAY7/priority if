@@ -1,0 +1,17 @@
+module priority_if;
+  int a=15;
+  int b=20;
+  
+  initial begin
+    
+    priority if(a>b)
+      $display("a is greater than b");
+    else if(a<b)
+      $display("a is less than b");
+    else 
+      $display("all are false");
+  end 
+endmodule
+
+      output:run -all
+# a is less than b
