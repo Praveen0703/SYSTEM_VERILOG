@@ -1,0 +1,22 @@
+module priority_if;
+  logic[1:0]sel;
+  logic r;
+  
+  initial begin
+    
+  sel=2'b01;
+    
+    priority case(sel)
+      2'b00:$display("r=A");
+      2'b01:$display("r=B");
+      2'b10:$display("r=C");
+      2'b11:$display("r=D");
+      default:$display(0);
+                    
+      
+    endcase
+  end
+                     endmodule
+      
+
+      
