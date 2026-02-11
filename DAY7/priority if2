@@ -1,0 +1,15 @@
+module priority_if;
+  logic[7:0]a,b;
+  
+  initial begin
+    a=4'd8;
+    b=4'd7;
+    priority if(a>b)
+      $display("a is greater than b");
+    else if (a>=b)
+    $display("a is greater than or equal to b");
+    else 
+      $display("all are true");
+    
+  end
+endmodule
